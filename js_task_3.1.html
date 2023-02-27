@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <b id="personobj"> </b>
+    <script>
+        function person(name, age, gender, address) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.address = address;
+        }
+        var Persons = new person("Harshan", 20, "male", "1/102-3,CBE-641101");
+
+        function Display() {
+            document.getElementById("personobj").innerHTML = ("Name :" + Persons.name + "<br>" + "Age :" + Persons.age + "<br>" + "Gender :" + Persons.gender + "<br>" + "Address :" + Persons.address);
+        }
+        Display();
+    </script>
+</body>
+
+</html>

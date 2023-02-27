@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <b id="person"> </b>
+    <script>
+        class Personcls {
+            constructor(name, age, gender, Address) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.Address = Address;
+
+                if (this.constructor === Personcls) {
+                    throw new Error("Can't create  an instance for the abstarct class.");
+                }
+            }
+            display() {
+                throw new Error("Abstract class doesn't have any implementation");
+            }
+        }
+        class Employee extends Personcls {
+            constructor(name, age, gender, Address, empcode, department, designation, salary) {
+                super(name, age, gender, Address);
+                this.empcode = empcode;
+                this.department = department;
+                this.designation = designation;
+                this.salary = salary;
+            }
+
+            display() {
+                document.getElementById("person").innerHTML = ("Name:" + person.name + "<br>" + "Age:" + person.age + "<br>" + "Gender:" + person.gender + "<br>" + "Address:" + person.Address + "<br>" + "empcode:" + person.empcode + "<br>" + "Department:" + person.department + "<br>" + "Designation: " + person.designation + "<br>" + "Salary:" + person.salary);
+            }
+        }
+
+        const person = new Employee("Harshan", 20, "male", "1/102-3,CBE-641101", 100, "Software", "Full Stack Developer", 20000);
+        person.display();
+    </script>
+
+</body>
+
+</html>
